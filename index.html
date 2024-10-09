@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Konversi Sudut  Derajat ke Persen dan sebaliknya</title>
+    </head>
+    <body>
+        <script>
+            
+function derajatKePersen(derajat) {
+    let persen = derajat / 360 * 100;
+    return persen;
+}
+
+function persenKeDerajat(persen) {
+    
+    let derajat = persen / 100 * 360;
+    return derajat;
+}
+
+function derajatkeradian(radian) {
+    let derajat = 2 * π / 360
+    return derajat
+}
+
+function radiankederajat(derajat) {
+    let radian = 2 * π * derajat;
+    return radian
+}
+
+function persenkeradian(radian) {
+    let persen = radian / 100 * 360 * 2 * π / 360
+    return persen
+}
+
+function radiankepersen(persen) {
+    let radian = persen * 2 * π * radian / 360 * 100
+    return radian
+}
+
+let derajat = prompt ("masukkan nilai sudut derajat");
+let persen = derajatKePersen(derajat);
+console.log(`${derajat} derajat = ${persen}%`);
+
+let persenKemiringan = prompt ("masukkan nilai sudut persen");
+let derajatSudut = persenKeDerajat(persenKemiringan);
+console.log(`${persenKemiringan}% = ${derajatSudut} derajat`);
+
+let radian = prompt ("masukkan nilai sudut radian");
+console.log(`${radian} radian = ${radianKeDerajat(radian).toFixed(2)} derajat`);
+console.log(`${radian} radian = ${radianKePersen(radian).toFixed(2)}%`)
+
+        </script>
+    </body>
+</html>
